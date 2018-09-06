@@ -12,6 +12,7 @@ pipeline {
                 echo 'Scala Application pipeline.'
                 deleteDir()
                 checkout scm
+                sh "${tool name: 'sbt', type:'org.jvnet.hudson.plugins.SbtPluginBuilder$SbtInstallation'}/bin/sbt compile"
             }
         }
     }
