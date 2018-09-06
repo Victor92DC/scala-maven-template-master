@@ -12,7 +12,6 @@ pipeline {
                 echo 'Scala Application pipeline.'
                 deleteDir()
                 checkout scm
-                sh "./mvnw clean install -DskipTests"
             }
         }
     }
