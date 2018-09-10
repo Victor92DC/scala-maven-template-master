@@ -10,7 +10,7 @@ pipeline {
                 deleteDir()
                 checkout scm
                 withMaven(maven: 'ADOP Maven'){
-                  sh "mvnw clean install"
+                  sh "mvn clean install"
                 }
             }
         }
