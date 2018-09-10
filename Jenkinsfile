@@ -9,7 +9,9 @@ pipeline {
                 echo 'Compiling...'
                 deleteDir()
                 checkout scm
-                sh "./mvnw clean install -DskipTests"
+                withMaven(maven: 'ADOP Maven'){
+                  sh "mvnw clean install"
+                }
             }
         }
     }
